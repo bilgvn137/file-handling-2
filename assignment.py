@@ -8,7 +8,19 @@ def save_scores(names, scores, filename):
     file.close()
 # Exercise 2
 def average_score(filename):
-    # Write your code here
+    file=open(filename,"r")
+    sum=0
+    c=0
+    lst=file.readlines()
+    if lst==[]:
+        return 0
+    else:
+        for i in range(len(lst)):
+            a= lst[i].split(",")
+            sum += int(a[1])
+            c=i
+        return sum/(c+1)
+    file.close()
     pass
 
 # Exercise 3
