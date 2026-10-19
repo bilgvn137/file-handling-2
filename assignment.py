@@ -19,8 +19,10 @@ def average_score(filename):
             if lst[i]!="\n":
                 a= lst[i].split(",")
                 sum += int(a[1])
-                c=i
-        return round(sum/(c+1),1)
+                c=c+1
+        return round(sum/(c),1)
+    file.close()
+    pass
 
 # Exercise 3
 def filter_passed(source, destination, pass_mark):
